@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПДД для детей - Учим правила весело!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/games.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-icon">🚦</div>
+            <h1>ПДД для детей</h1>
+        </div>
+        <p>Учим правила дорожного движения весело и интересно!</p>
+
+        <div class="user-info">
+            <div class="coins">
+                <span class="coin-icon">🪙</span>
+                <span id="coin-count">0</span>
+            </div>
+            <div>Уровень: <span id="user-level">1</span></div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" class="nav-link active" data-section="home">Главная</a></li>
+            <li><a href="#" class="nav-link" data-section="lessons">Видеоуроки</a></li>
+            <li><a href="#" class="nav-link" data-section="games">Мини-игры</a></li>
+            <li><a href="#" class="nav-link" data-section="quiz">Тестирование</a></li>
+            <li><a href="#" class="nav-link" data-section="comics">Комиксы</a></li>
+            <li><a href="#" class="nav-link" data-section="quests">Квесты</a></li>
+            <li><a href="#" class="nav-link" data-section="leaderboard">Рейтинг</a></li>
+            <li><a href="#" class="nav-link" data-section="achievements">Достижения</a></li>
+            <li><a href="#" class="nav-link" data-section="shop">Магазин</a></li>
+            <li><a href="#" class="nav-link" data-section="customization">Кастомизация</a></li>
+            <li><a href="#" class="nav-link" data-section="parent">Родителям</a></li>
+            <li><a href="#" class="nav-link" data-section="stats">Статистика</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Главная страница -->
+        <section id="home" class="section active">
+            <h2>Добро пожаловать в мир безопасных дорог!</h2>
+            <p>Здесь ты узнаешь все важные правила дорожного движения для пешеходов и велосипедистов. Смотри интересные видео, проходи тесты и играй в увлекательные игры!</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="home-lessons-watched">0</div>
+                    <div>Просмотрено уроков</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="home-quizzes-passed">0</div>
+                    <div>Пройдено тестов</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="home-achievements">0</div>
+                    <div>Получено достижений</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="home-game-score">0</div>
+                    <div>Лучший результат в игре</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 30px;">Активные квесты</h3>
+            <div id="home-quests">
+                <!-- Активные квесты будут загружаться здесь -->
+            </div>
+
+            <h3 style="margin-top: 30px;">Популярные уроки</h3>
+            <div class="video-lessons">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        🚸
+                        <div class="video-duration">5:20</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Правила для пешеходов</h3>
+                        <p>Узнай, как правильно переходить дорогу и быть заметным для водителей.</p>
+                        <a href="#" class="btn watch-video" data-video="1">Смотреть</a>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        🚴
+                        <div class="video-duration">6:45</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Правила для велосипедистов</h3>
+                        <p>Как безопасно кататься на велосипеде по городу и за его пределами.</p>
+                        <a href="#" class="btn watch-video" data-video="2">Смотреть</a>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        🛑
+                        <div class="video-duration">7:10</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Дорожные знаки</h3>
+                        <p>Изучи важные дорожные знаки, которые должен знать каждый.</p>
+                        <a href="#" class="btn watch-video" data-video="3">Смотреть</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Видеоуроки -->
+        <section id="lessons" class="section">
+            <h2>Видеоуроки по ПДД</h2>
+            <p>Выбери урок и узнай что-то новое о правилах дорожного движения!</p>
+
+            <div class="video-lessons">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        🚸
+                        <div class="video-duration">5:20</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Пешеходный переход</h3>
+                        <p>Как правильно переходить дорогу по зебре и на светофоре.</p>
+                        <a href="#" class="btn watch-video" data-video="1">Смотреть</a>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        🚴
+                        <div class="video-duration">6:45</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Безопасность на велосипеде</h3>
+                        <p>Экипировка, правила движения и жесты велосипедиста.</p>
+                        <a href="#" class="btn watch-video" data-video="2">Смотреть</a>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        🛑
+                        <div class="video-duration">7:10</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Дорожные знаки для детей</h3>
+                        <p>Изучи самые важные дорожные знаки, которые нужно знать.</p>
+                        <a href="#" class="btn watch-video" data-video="3">Смотреть</a>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        ⚠️
+                        <div class="video-duration">4:55</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Осторожно, опасность!</h3>
+                        <p>Ситуации, которых нужно избегать на дороге.</p>
+                        <a href="#" class="btn watch-video" data-video="4">Смотреть</a>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        🌃
+                        <div class="video-duration">5:40</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Безопасность в темное время суток</h3>
+                        <p>Как быть заметным на дороге ночью и в плохую погоду.</p>
+                        <a href="#" class="btn watch-video" data-video="5">Смотреть</a>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        🚌
+                        <div class="video-duration">6:15</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Правила в общественном транспорте</h3>
+                        <p>Как безопасно ездить в автобусе, троллейбусе и трамвае.</p>
+                        <a href="#" class="btn watch-video" data-video="6">Смотреть</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Мини-игры -->
+        <section id="games" class="section">
+            <h2>Мини-игры по ПДД</h2>
+            <p>Выбери игру и проверь свои знания в увлекательной форме!</p>
+
+            <div class="mini-games-grid">
+                <div class="mini-game-card" data-game="violation">
+                    <div class="mini-game-icon">🔍</div>
+                    <h3>Найди нарушителя</h3>
+                    <p>Найди, кто нарушает правила дорожного движения на улице!</p>
+                </div>
+
+                <div class="mini-game-card" data-game="bicycle">
+                    <div class="mini-game-icon">🚴</div>
+                    <h3>Собери велосипедиста</h3>
+                    <p>Выбери правильную экипировку для безопасной поездки!</p>
+                </div>
+
+                <div class="mini-game-card" data-game="signs">
+                    <div class="mini-game-icon">🛑</div>
+                    <h3>Расставь знаки</h3>
+                    <p>Размести дорожные знаки на перекрестке в правильных местах!</p>
+                </div>
+            </div>
+
+            <!-- Контейнеры для игр -->
+            <div id="violation-game" class="game-content" style="display: none;">
+                <h3>Найди нарушителя</h3>
+                <p class="game-instruction">Посмотри на картинку и определи, есть ли здесь нарушитель правил дорожного движения:</p>
+                <div class="violation-scene" id="violation-scene">
+                    <!-- Сцена с нарушителями будет генерироваться динамически -->
+                </div>
+                <div id="violation-options" class="violation-options-container">
+                    <!-- Варианты ответов будут генерироваться динамически -->
+                </div>
+                <div class="game-hint" id="violation-hint"></div>
+                <button class="btn" id="next-violation">Следующая сцена</button>
+            </div>
+
+            <div id="bicycle-game" class="game-content" style="display: none;">
+                <h3>Собери велосипедиста</h3>
+                <p class="game-instruction">Выбери все элементы экипировки, которые нужны для безопасной поездки на велосипеде:</p>
+                <div class="bicycle-equipment" id="bicycle-equipment">
+                    <!-- Элементы экипировки будут генерироваться динамически -->
+                </div>
+                <div class="game-controls">
+                    <button class="btn" id="check-equipment">Проверить</button>
+                    <button class="btn" id="next-bicycle">Следующий набор</button>
+                </div>
+                <div class="game-hint" id="bicycle-hint"></div>
+            </div>
+
+            <div id="signs-game" class="game-content" style="display: none;">
+                <h3>Расставь знаки</h3>
+                <p class="game-instruction">Перетащи дорожные знаки на правильные места на перекрестке:</p>
+                <div class="intersection-map" id="intersection-map">
+                    <div class="road-horizontal"></div>
+                    <div class="road-vertical"></div>
+                    <!-- Знаки будут добавляться динамически -->
+                </div>
+                <div class="available-signs" id="available-signs">
+                    <!-- Доступные знаки будут генерироваться динамически -->
+                </div>
+                <div class="game-controls">
+                    <button class="btn" id="check-signs">Проверить расстановку</button>
+                    <button class="btn" id="next-signs">Следующий перекресток</button>
+                </div>
+                <div class="game-hint" id="signs-hint"></div>
+            </div>
+        </section>
+
+        <!-- Тестирование -->
+        <section id="quiz" class="section">
+            <h2>Проверь свои знания!</h2>
+            <p>После просмотра видеоуроков пройди тестирование, чтобы закрепить знания.</p>
+
+            <div class="quiz-container">
+                <div class="progress-container">
+                    <div class="progress-bar" id="quiz-progress"></div>
+                </div>
+
+                <div id="quiz-content">
+                    <!-- Контент теста будет загружаться динамически -->
+                </div>
+
+                <div class="quiz-controls">
+                    <button id="next-question" class="btn" style="display: none;">Следующий вопрос</button>
+                    <button id="restart-quiz" class="btn" style="display: none;">Пройти тест заново</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Комиксы -->
+        <section id="comics" class="section">
+            <h2>Обучающие комиксы</h2>
+            <p>Читай истории и принимай решения за героев! Узнавай правила дорожного движения через увлекательные сюжеты.</p>
+
+            <div class="comic-container" id="comic-container">
+                <!-- Комиксы будут загружаться динамически -->
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn" id="prev-comic" style="display: none;">Предыдущая история</button>
+                <button class="btn" id="next-comic">Следующая история</button>
+            </div>
+        </section>
+
+        <!-- Квесты -->
+        <section id="quests" class="section">
+            <h2>Ежедневные квесты</h2>
+            <p>Выполняй задания и получай награды! Новые квесты появляются каждый день.</p>
+
+            <div class="quests-container" id="quests-container">
+                <!-- Квесты будут загружаться динамически -->
+            </div>
+        </section>
+
+        <!-- Рейтинг -->
+        <section id="leaderboard" class="section">
+            <h2>Таблица лидеров</h2>
+            <p>Соревнуйся с другими игроками! Набери больше всех очков и займи первое место!</p>
+
+            <div class="leaderboard">
+                <div class="leaderboard-header">
+                    <h3>Топ игроков</h3>
+                </div>
+                <div class="leaderboard-list" id="leaderboard-list">
+                    <!-- Рейтинг будет загружаться динамически -->
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn" id="refresh-leaderboard">Обновить рейтинг</button>
+                <button class="btn btn-outline" id="share-result">Поделиться результатом</button>
+            </div>
+        </section>
+
+        <!-- Достижения -->
+        <section id="achievements" class="section">
+            <h2>Твои достижения</h2>
+            <p>Собирай достижения, изучая правила дорожного движения!</p>
+
+            <div class="achievements">
+                <div class="achievement" id="first-video">
+                    <div class="achievement-icon">🎬</div>
+                    <h3>Первый урок</h3>
+                    <p>Посмотри свой первый видеоурок</p>
+                    <div class="achievement-reward">Награда: 10 🪙</div>
+                </div>
+
+                <div class="achievement locked" id="video-expert">
+                    <div class="achievement-icon">📺</div>
+                    <h3>Эксперт видео</h3>
+                    <p>Посмотри все видеоуроки</p>
+                    <div class="achievement-reward">Награда: 50 🪙</div>
+                </div>
+
+                <div class="achievement locked" id="quiz-master">
+                    <div class="achievement-icon">📝</div>
+                    <h3>Знаток ПДД</h3>
+                    <p>Пройди все тесты без ошибок</p>
+                    <div class="achievement-reward">Награда: 30 🪙</div>
+                </div>
+
+                <div class="achievement locked" id="violation-finder">
+                    <div class="achievement-icon">🔍</div>
+                    <h3>Ищейка нарушителей</h3>
+                    <p>Найди 10 нарушителей в мини-игре</p>
+                    <div class="achievement-reward">Награда: 25 🪙</div>
+                </div>
+
+                <div class="achievement locked" id="bicycle-expert">
+                    <div class="achievement-icon">🚴</div>
+                    <h3>Экипировщик</h3>
+                    <p>Собери 5 велосипедистов правильно</p>
+                    <div class="achievement-reward">Награда: 30 🪙</div>
+                </div>
+
+                <div class="achievement locked" id="signs-master">
+                    <div class="achievement-icon">🛑</div>
+                    <h3>Знаток знаков</h3>
+                    <p>Правильно расставь знаки на 3 перекрестках</p>
+                    <div class="achievement-reward">Награда: 35 🪙</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Магазин -->
+        <section id="shop" class="section">
+            <h2>Магазин</h2>
+            <p>Потрать заработанные монеты на крутые улучшения!</p>
+
+            <div class="shop-items">
+                <div class="shop-item" id="item-character1">
+                    <div class="shop-item-icon">🚶</div>
+                    <h3>Новый персонаж</h3>
+                    <p>Веселый персонаж для игры</p>
+                    <div class="shop-item-price">
+                        <span>🪙</span> <span>15</span>
+                    </div>
+                    <button class="btn btn-small buy-btn" data-item="character1">Купить</button>
+                </div>
+
+                <div class="shop-item" id="item-character2">
+                    <div class="shop-item-icon">🚴</div>
+                    <h3>Велосипедист</h3>
+                    <p>Персонаж на велосипеде</p>
+                    <div class="shop-item-price">
+                        <span>🪙</span> <span>25</span>
+                    </div>
+                    <button class="btn btn-small buy-btn" data-item="character2">Купить</button>
+                </div>
+
+                <div class="shop-item" id="item-extra-life">
+                    <div class="shop-item-icon">❤️</div>
+                    <h3>Дополнительная жизнь</h3>
+                    <p>+1 жизнь в игре</p>
+                    <div class="shop-item-price">
+                        <span>🪙</span> <span>20</span>
+                    </div>
+                    <button class="btn btn-small buy-btn" data-item="extra-life">Купить</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Кастомизация -->
+        <section id="customization" class="section">
+            <h2>Кастомизация</h2>
+            <p>Настрой внешний вид своего профиля и игрового персонажа!</p>
+
+            <h3>Фоны профиля</h3>
+            <div class="customization-grid" id="backgrounds-grid">
+                <!-- Фоны будут загружаться динамически -->
+            </div>
+        </section>
+
+        <!-- Родителям -->
+        <section id="parent" class="section">
+            <h2>Для родителей</h2>
+            <p>Здесь вы можете отслеживать прогресс ребенка и найти полезные советы по обучению ПДД.</p>
+
+            <div class="parent-dashboard">
+                <div class="parent-card">
+                    <h3>Прогресс обучения</h3>
+                    <div class="progress-chart" id="progress-chart">
+                        <!-- График прогресса будет отображаться здесь -->
+                    </div>
+                    <p>Пройдено уроков: <span id="parent-lessons">0</span> из 8</p>
+                    <p>Пройдено тестов: <span id="parent-quizzes">0</span> из 4</p>
+                    <p>Получено достижений: <span id="parent-achievements">0</span> из 12</p>
+                </div>
+
+                <div class="parent-card">
+                    <h3>Советы по обучению</h3>
+                    <ul class="checklist">
+                        <li class="checklist-item">
+                            <div class="checklist-checkbox"></div>
+                            <span>Объясняйте правила на реальных примерах во время прогулок</span>
+                        </li>
+                        <li class="checklist-item">
+                            <div class="checklist-checkbox"></div>
+                            <span>Обращайте внимание ребенка на дорожные знаки и разметку</span>
+                        </li>
+                        <li class="checklist-item">
+                            <div class="checklist-checkbox"></div>
+                            <span>Практикуйте переход дороги вместе, комментируя каждое действие</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Статистика -->
+        <section id="stats" class="section">
+            <h2>Твоя статистика</h2>
+            <p>Следи за своими успехами в изучении ПДД!</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="stats-lessons-watched">0</div>
+                    <div>Просмотрено уроков</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stats-quizzes-passed">0</div>
+                    <div>Пройдено тестов</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stats-correct-answers">0%</div>
+                    <div>Правильных ответов</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stats-achievements">0/12</div>
+                    <div>Получено достижений</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stats-violations-found">0</div>
+                    <div>Найдено нарушителей</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stats-bicycles-equipped">0</div>
+                    <div>Собрано велосипедистов</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stats-signs-placed">0</div>
+                    <div>Расставлено знаков</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stats-quests-completed">0</div>
+                    <div>Выполнено квестов</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Маскот -->
+    <div class="mascot-container">
+        <div class="mascot-message" id="mascot-message">
+            <div id="mascot-text">Привет! Я Светофорчик Тим! Нажми на меня, и я расскажу что-то интересное о ПДД!</div>
+            <div class="mascot-tip">💡 Совет от Тима</div>
+        </div>
+        <div class="mascot" id="mascot">
+            <div class="mascot-face">
+                <div class="mascot-eyes">
+                    <div class="mascot-eye"></div>
+                    <div class="mascot-eye"></div>
+                </div>
+                <div class="mascot-mouth" id="mascot-mouth"></div>
+            </div>
+            <div class="mascot-body"></div>
+            <div class="mascot-hands">
+                <div class="mascot-hand"></div>
+                <div class="mascot-hand"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальные окна -->
+    <div class="modal" id="challenge-modal">
+        <div class="modal-content">
+            <h3>Вызов другу! 🎯</h3>
+            <p>Отправь ссылку-вызов другу для соревнования в тесте!</p>
+            <input type="text" id="challenge-link" readonly style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #cbd5e0; border-radius: 5px;">
+            <div class="modal-buttons">
+                <button class="modal-btn primary" id="copy-challenge">Скопировать ссылку</button>
+                <button class="modal-btn secondary" id="close-challenge">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 ПДД для детей. Все права защищены.</p>
+            <p>Помни: знание правил дорожного движения спасает жизни!</p>
+
+            <button id="developer-btn" class="btn btn-outline" style="margin: 10px auto;">О разработчике</button>
+
+            <div class="developer-info" id="developer-info" style="display: none;">
+                <h3>Разработчик проекта</h3>
+                <div class="developer-details">
+                    <div>
+                        <strong>Псевдоним:</strong> ONEGIN
+                    </div>
+                    <div>
+                        <strong>Опыт работы:</strong> Более 5 лет в IT/Design
+                    </div>
+                    <div>
+                        <strong>Специализация:</strong> Full-stack разработка, дизайн, фриланс
+                    </div>
+                    <div>
+                        <strong>Телеграмм:</strong> @Onegin2718
+                    </div>
+                </div>
+                <div class="developer-contact">
+                    <p>Выполняю заказы любой сложности в сфере IT и дизайна</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/utils.js"></script>
+    <script src="js/user-data.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/mascot.js"></script>
+    <script src="js/games/mini-games.js"></script>
+    <script src="js/games/quiz.js"></script>
+    <script src="js/features/comics.js"></script>
+    <script src="js/features/quests.js"></script>
+    <script src="js/features/leaderboard.js"></script>
+    <script src="js/features/customization.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
